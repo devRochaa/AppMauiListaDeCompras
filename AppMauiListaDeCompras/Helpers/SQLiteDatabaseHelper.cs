@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AppMauiListaDeCompras.Models;
 using SQLite;
-using AppMauiListaDeCompras.Models;
 
 namespace AppMauiListaDeCompras.Helpers
 {
@@ -31,6 +26,17 @@ namespace AppMauiListaDeCompras.Helpers
                 p.Descricao, p.Preco, p.Quantidade, p.Id);
         }
 
+        public Task<List<Produto>> GetAll()
+        {
+            return _conn.Table<Produto>().ToListAsync();
+        }
+
+        public Task<List<Produto>> Search(string q)
+        {
+            string sql = "SELECT * FROM Produto WHERE descricao LIKE '%" + q + "%'";
+
+            return _conn.QueryScalarsAsync<Produto>(sql);
+        }
         public Task<int> Delelte(int id)
         { 
             return _conn.Table<Produto>().DeleteAsync(i => i.Id == id);
