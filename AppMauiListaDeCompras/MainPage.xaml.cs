@@ -77,5 +77,5 @@ namespace AppMauiListaDeCompras
         {
 
         }
-    } //Fecha classes
+    } //Fecha classes ad
 }
