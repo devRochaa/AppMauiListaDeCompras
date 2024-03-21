@@ -37,7 +37,7 @@ namespace AppMauiListaDeCompras.Helpers
 
             return _conn.QueryScalarsAsync<Produto>(sql);
         }
-        public Task<int> Delelte(int id)
+        public Task<int> Delete(int id)
         { 
             return _conn.Table<Produto>().DeleteAsync(i => i.Id == id);
         }

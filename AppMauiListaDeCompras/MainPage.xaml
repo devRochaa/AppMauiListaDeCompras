@@ -40,7 +40,7 @@
                                 <MenuItem Text="Remover" Clicked="MenuItem_Clicked_Remover" />
                             </ViewCell.ContextActions>
                             <Grid RowDefinitions="Auto"
-                                  ColumnDefinitions="*, Auto, Auto">
+                                  ColumnDefinitions="3*, *, *, *">
                                 <Label Grid.Row="0" Grid.Column="0" Text="{Binding Descricao}" />
                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding Quantidade}" />
                                 <Label Grid.Row="0" Grid.Column="2" Text="{Binding Preco}" />

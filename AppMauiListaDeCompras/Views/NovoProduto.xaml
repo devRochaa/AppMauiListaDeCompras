@@ -4,7 +4,7 @@
              x:Class="AppMauiListaDeCompras.Views.NovoProduto"
              Title="NovoProduto">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Salvar" />
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -16,7 +16,7 @@
             <Entry x:Name="txt_quantidade" />
 
             <Label Text="Preço: "/>
-            <Entry x:Name="txt_texto" />
+            <Entry x:Name="txt_preco" />
         </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>
