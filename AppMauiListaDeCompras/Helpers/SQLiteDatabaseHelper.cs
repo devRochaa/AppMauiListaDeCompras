@@ -35,7 +35,7 @@ namespace AppMauiListaDeCompras.Helpers
         {
             string sql = "SELECT * FROM Produto WHERE descricao LIKE '%" + q + "%'";
 
-            return _conn.QueryScalarsAsync<Produto>(sql);
+            return _conn.QueryAsync<Produto>(sql);
         }
         public Task<int> Delete(int id)
         { 
