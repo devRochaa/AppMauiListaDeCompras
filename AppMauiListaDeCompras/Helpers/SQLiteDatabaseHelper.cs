@@ -40,6 +40,7 @@ namespace AppMauiListaDeCompras.Helpers
         public Task<int> Delete(int id)
         { 
             return _conn.Table<Produto>().DeleteAsync(i => i.Id == id);
+            //mudar 1
         }
     }
 }
